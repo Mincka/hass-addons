@@ -5,7 +5,7 @@ set -eum
 
 CONFIG_PATH=/data/options.json
 TAILSCALE_SOCKET="/var/run/tailscale/tailscaled.sock"
-TAILSCALE_FLAGS=()
+TAILSCALE_FLAGS=("--ssh")
 TAILSCALED_FLAGS=("-statedir" "/data" "-state" "/data/tailscaled.state" "-socket" "$TAILSCALE_SOCKET")
 
 # Parse config to construct `tailscale up` args
